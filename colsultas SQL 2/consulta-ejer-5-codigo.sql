@@ -1,0 +1,17 @@
+insert into medico value (1, "analia", "procopio", 123545, "paleativos");
+insert into medico value (2, "adriana", "procopio", 341234, "dentista");
+insert into medico value (3, "andres", "thomas", 1234143, "kinesiologia");
+insert into medico value (4, "laura", "rapela", 1241323, "kinesiologia");
+insert into paciente value (1, "roberto", "gomez", "av.corrientes", "buenos aires", "capital", 1233, 1244234, "1998-09-12");
+insert into paciente value (2, "santino", "perez", "beiro", "buenos aires", "capital", 1443, 1244534, "2006-05-10");
+insert into paciente value (3, "mati", "faya", "maipu", "buenos aires", "capital", 9999, 1010111, "2007-05-10");
+insert into paciente value (4, "santiago", "mitter", "messi", "santa fe", "capital", 4599, 1484841, "2018-08-07");
+insert into ingreso value (1, 1, 1, "2023-01-01", 1, 1);
+insert into ingreso value (2, 2, 2, "2023-01-01", 2, 2);
+insert into ingreso value (3, 3, 3, "2023-01-01", 3, 3);
+insert into ingreso value (4, 4, 4, "2023-01-01", 4, 4);
+select nombre from medico where especialidad="kinesiologia" order by nombre;
+delete from ingreso where `fecha de ingreso`<"2018-01-01";
+select `cama del paciente` from ingreso where paciente_codigo=1;
+update medico set especialidad="pediatra" where coidgo=4;
+select nombre, coidgo from medico where nombre like "a%";
